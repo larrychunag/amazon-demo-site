@@ -5,7 +5,14 @@ module.exports = {
         "./resources/**/*.vue",
     ],
     theme: {
-        extend: {},
+        extend: {
+            backgroundImage: {
+                "header-img": "url('/images/header-img.jpg')",
+            },
+            height: {
+                128: "32rem",
+            },
+        },
     },
     plugins: [],
 };

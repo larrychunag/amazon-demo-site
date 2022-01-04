@@ -12,6 +12,14 @@
         "format": "./vendor/bin/php-cs-fixer fix --config .php-cs-fixer.dist.php",
         "format:blade": "blade-formatter -w"
     },
+    "dependencies": {
+        "imagemin-webpack-plugin": "^2.4.2",
+        "vue": "^2.6.12",
+        "vue-loader": "^15.9.8",
+        "vue-router": "^3.5.3",
+        "vue-template-compiler": "^2.6.12",
+        "tailwindcss": "^3.0.8"
+    },
     "devDependencies": {
         "@commitlint/cli": "^16.0.1",
         "@commitlint/config-conventional": "^16.0.0",
@@ -36,11 +44,7 @@
         "prettier": "^2.5.1",
         "resolve-url-loader": "^3.1.2",
         "sass": "^1.32.11",
-        "sass-loader": "^11.0.1",
-        "tailwindcss": "^3.0.8",
-        "vue": "^2.6.12",
-        "vue-loader": "^15.9.8",
-        "vue-template-compiler": "^2.6.12"
+        "sass-loader": "^11.0.1"
     },
     "lint-staged": {
         "*.{php}": [
@@ -56,6 +60,5 @@
             "eslint --fix",
             "prettier --write"
         ]
-    },
-    "dependencies": []
+    }
 }

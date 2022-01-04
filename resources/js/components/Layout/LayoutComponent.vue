@@ -1,14 +1,10 @@
 <template>
-    <div class="container">
-        <div>
-            <header-compoent />
-        </div>
+    <div>
+        <header-compoent />
         <main>
             <router-view />
         </main>
-        <div>
-            <footer-component />
-        </div>
+        <footer-component />
     </div>
 </template>
 

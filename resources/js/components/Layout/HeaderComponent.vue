@@ -1,11 +1,11 @@
 <template>
-    <div class="container">Header Component</div>
+    <div
+        class="w-full h-[32rem] bg-cover bg-center bg-[url('/images/header-img.jpg')]"
+    ></div>
 </template>
 
 <script>
-export default {
-    mounted() {
-        console.log("Component mounted.");
-    },
-};
+export default {};
 </script>
+
+<style scoped></style>
