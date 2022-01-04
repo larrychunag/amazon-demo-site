@@ -99,6 +99,23 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
 /***/ }),
@@ -1090,12 +1107,47 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", {
-    staticClass:
-      "w-full h-[32rem] bg-cover bg-center bg-[url('/images/header-img.jpg')]",
-  })
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "w-full h-[32rem] bg-cover bg-center bg-[url('/images/header-img.jpg')]",
+      },
+      [
+        _c("ul", { staticClass: "flex" }, [
+          _c("li", { staticClass: "mr-6" }, [
+            _c(
+              "a",
+              {
+                staticClass: "font-mono text-indigo-900 text-xl no-underline",
+                attrs: { href: "#" },
+              },
+              [_vm._v("コーヒー豆")]
+            ),
+          ]),
+          _vm._v(" "),
+          _c("li", { staticClass: "mr-6" }, [
+            _c(
+              "a",
+              {
+                staticClass: "font-mono text-indigo-900 text-xl no-underline",
+                attrs: { href: "#" },
+              },
+              [_vm._v("コーヒー器具")]
+            ),
+          ]),
+        ]),
+      ]
+    )
+  },
+]
 render._withStripped = true
 
 
