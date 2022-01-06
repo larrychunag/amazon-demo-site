@@ -22,9 +22,10 @@ final class CategoryTest extends TestCase
     public function testDatabase()
     {
         $category = Category::factory()
-            ->count(3)
+            ->hasProducts(10)
             ->create()
         ;
-        $this->assertDatabaseCount('categories', 3);
+        $this->assertDatabaseCount('categories', 1);
+        $this->assertDatabaseCount('products', 10);
     }
 }
