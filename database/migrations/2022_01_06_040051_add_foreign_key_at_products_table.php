@@ -13,7 +13,7 @@ class AddForeignKeyAtProductsTable extends Migration
     {
         Schema::table('products', function (Blueprint $table) {
             $table
-                ->foreignId('cactegory_id')
+                ->foreignId('category_id')
                 ->constrained()
                 ->onUpdate('cascade')
                 ->onDelete('cascade')
