@@ -19,8 +19,8 @@ class CreateProductsTable extends Migration
             $table->text('description')->nullable(false);
             $table->json('image')->nullable(false);
             $table->string('status', 10)->nullable(false);
-            $table->timestamp('created_data');
-            $table->timestamp('updated_data');
+            $table->timestamp('created_at');
+            $table->timestamp('updated_at');
         });
     }
 

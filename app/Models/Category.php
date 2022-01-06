@@ -9,12 +9,10 @@ class Category extends Model
 {
     use HasFactory;
 
-    public function category()
-    {
-    }
+    protected $fillable = ['name', 'created_at', 'updated_at'];
 
-    public function comments()
+    public function products()
     {
-        return $this->hasMany(Comment::class);
+        return $this->hasMany(Product::class);
     }
 }
