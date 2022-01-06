@@ -20,5 +20,5 @@ Auth::routes();
 //     "index",
 // ])->name("home");
 Route::get('{any}', function () {
-    return view('welcome');
+    return view('main');
 })->where('any', '.*');
