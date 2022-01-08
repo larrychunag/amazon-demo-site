@@ -132,10 +132,7 @@ return [
         'redirect_to' => 'auth/login',
 
         // The URIs that should be excluded from authorization.
-        'excepts' => [
-            'auth/login',
-            'auth/logout',
-        ],
+        'excepts' => ['auth/login', 'auth/logout'],
     ],
 
     /*
@@ -149,7 +146,7 @@ return [
     */
     'upload' => [
         // Disk in `config/filesystem.php`.
-        'disk' => 'admin',
+        'disk' => 'gcs',
 
         // Image and file upload path under the disk above.
         'directory' => [
@@ -206,7 +203,17 @@ return [
         'enable' => true,
 
         // Only logging allowed methods in the list
-        'allowed_methods' => ['GET', 'HEAD', 'POST', 'PUT', 'DELETE', 'CONNECT', 'OPTIONS', 'TRACE', 'PATCH'],
+        'allowed_methods' => [
+            'GET',
+            'HEAD',
+            'POST',
+            'PUT',
+            'DELETE',
+            'CONNECT',
+            'OPTIONS',
+            'TRACE',
+            'PATCH',
+        ],
 
         /*
          * Routes that will not log to database.
@@ -214,9 +221,7 @@ return [
          * All method to path like: admin/auth/logs
          * or specific method to path like: get:admin/auth/logs.
          */
-        'except' => [
-            env('ADMIN_ROUTE_PREFIX', 'admin').'/auth/logs*',
-        ],
+        'except' => [env('ADMIN_ROUTE_PREFIX', 'admin').'/auth/logs*'],
     ],
 
     /*
@@ -339,8 +344,7 @@ return [
     */
     'minify_assets' => [
         // Assets will not be minified.
-        'excepts' => [
-        ],
+        'excepts' => [],
     ],
 
     /*
@@ -355,10 +359,7 @@ return [
     | Exclude route from generate menu command
     |--------------------------------------------------------------------------
     */
-    'menu_exclude' => [
-        '_handle_selectable_',
-        '_handle_renderable_',
-    ],
+    'menu_exclude' => ['_handle_selectable_', '_handle_renderable_'],
 
     /*
     |--------------------------------------------------------------------------
@@ -393,6 +394,5 @@ return [
     | https://github.com/laravel-admin-extensions.
     |
     */
-    'extensions' => [
-    ],
+    'extensions' => [],
 ];
