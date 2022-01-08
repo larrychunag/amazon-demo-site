@@ -13,6 +13,12 @@ Route::group(
     ],
     function (Router $router) {
         $router->get('/', 'HomeController@index')->name('home');
+        $router
+            ->get('/api/categories', 'ApiController@categories')
+            ->name('categories')
+        ;
         $router->resource('/users', UserController::class);
+        $router->resource('/products', ProductController::class);
+        $router->resource('/categories', CategoryController::class);
     }
 );
