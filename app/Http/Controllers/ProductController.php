@@ -14,6 +14,15 @@ class ProductController extends Controller
      */
     public function index()
     {
+        $products = Product::all();
+
+        try {
+            $products = Product::all();
+
+            return response()->json($products, 200, [], JSON_UNESCAPED_SLASHES);
+        } catch (Throwable $error) {
+            return response()->json($error, 502, [], JSON_UNESCAPED_SLASHES);
+        }
     }
 
     /**
@@ -37,36 +46,44 @@ class ProductController extends Controller
     /**
      * Display the specified resource.
      *
+     * @param int $id
+     *
      * @return \Illuminate\Http\Response
      */
-    public function show(Product $product)
+    public function show($id)
     {
     }
 
     /**
      * Show the form for editing the specified resource.
      *
+     * @param int $id
+     *
      * @return \Illuminate\Http\Response
      */
-    public function edit(Product $product)
+    public function edit($id)
     {
     }
 
     /**
      * Update the specified resource in storage.
      *
+     * @param int $id
+     *
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Product $product)
+    public function update(Request $request, $id)
     {
     }
 
     /**
      * Remove the specified resource from storage.
      *
+     * @param int $id
+     *
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Product $product)
+    public function destroy($id)
     {
     }
 }
