@@ -33,7 +33,10 @@ class Product extends Model
             foreach ($image as $key => $value) {
                 $image[$key] = "{$baseURL}/{$value}";
             }
-            $this->attributes['image'] = json_encode($image);
+            $this->attributes['image'] = json_encode(
+                $image,
+                JSON_UNESCAPED_SLASHES
+            );
         }
     }
 
